@@ -26,3 +26,5 @@ class Personaje {
 const joffrey = new Reina("Joffrey", "Baratheon", 3);
 const jaime = new Luchadora("Jaime", "Lannister", 20, "honda", 7);
 console.log(jaime.morir());
+
+export default Personaje;

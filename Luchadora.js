@@ -1,3 +1,5 @@
+import Personaje from "index.js";
+
 class Luchadora extends Personaje {
   constructor(nombre, familia, edad, arma, destreza) {
     super(nombre, familia, edad);

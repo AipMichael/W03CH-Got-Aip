@@ -1,3 +1,5 @@
+import Personaje from "index.js";
+
 class Escudera extends Personaje {
   constructor(nombre, familia, edad, ama, pelotismo) {
     super(nombre, familia, edad);

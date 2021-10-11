@@ -1,3 +1,5 @@
+import Personaje from "index.js";
+
 class Reina extends Personaje {
   constructor(nombre, familia, edad, reinado) {
     super(nombre, familia, edad);
