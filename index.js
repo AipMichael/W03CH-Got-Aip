@@ -1,7 +1,7 @@
 class Personaje {
-  nombre;
-  familia;
-  edad;
+  nombre: nombre;
+  familia: familia;
+  edad: edad;
   estado = "vivo";
   constructor() {}
 
@@ -14,7 +14,7 @@ class Personaje {
 
 class reina extends Personaje {
   constructor(reinado, ) {
-    super();
+    super(nombre, familia, edad);
     this.reinado: reinado;
   }
 
@@ -27,7 +27,7 @@ class reina extends Personaje {
 
 class asesora extends Personaje {
   constructor(asesorada) {
-    super();
+    super(nombre, familia, edad);
     if (asesorada === reina || asesorada === asesora || asesorada === escudera || asesorada === luchadora){
       this.asesorada: asesorada;
     }
@@ -42,16 +42,32 @@ class asesora extends Personaje {
 
 class luchadora extends Personaje {
   constructor(arma, destreza) {
-    super();
+    super(nombre, familia, edad);
     this.arma = arma;
-    if (asesorada === reina || asesorada === asesora || asesorada === escudera || asesorada === luchadora){
-      this.asesorada: asesorada;
+    if (typeof destreza === "number" && destreza < 10 && destreza > 10){
+      this.destreza: destreza;
     }
     
   }
 
   comunicar () {
-    return "No sé por qué, pero creo que voy a morir pronto";
+    return "Primero pego y luego pregunto";
+  }
+
+}
+
+class escudera extends Personaje {
+  constructor(ama, pelotismo) {
+    super(nombre, familia, edad);
+    this.ama = ama;
+    if (typeof pelotismo === "number" && pelotismo < 10 && pelotismo > 10){
+      this.pelotismo: pelotismo;
+    }
+    
+  }
+
+  comunicar () {
+    return "Soy una loser";
   }
 
 }
