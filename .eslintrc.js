@@ -18,5 +18,10 @@ module.exports = {
     "lines-between-class-members": "off",
     "class-methods-use this": "off",
     "import/extensions": "off",
+    "lines-between-class-members": "off",
+    "class-methods-use this": "off",
+    "import/extensions": "off",
   },
+  parser: "@babel/eslint-parser",
+  babel: {},
 };
