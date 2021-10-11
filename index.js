@@ -1,9 +1,14 @@
 class Personaje {
+  nombre;
+  familia;
+  edad;
+  estado = "vivo";
+
+  constructor(nombre, familia, edad) {
   nombre: nombre;
   familia: familia;
   edad: edad;
-  estado = "vivo";
-  constructor() {}
+  }
 
   comunicar();
 
@@ -47,7 +52,6 @@ class luchadora extends Personaje {
     if (typeof destreza === "number" && destreza < 10 && destreza > 10){
       this.destreza: destreza;
     }
-    
   }
 
   comunicar () {
@@ -62,6 +66,9 @@ class escudera extends Personaje {
     this.ama = ama;
     if (typeof pelotismo === "number" && pelotismo < 10 && pelotismo > 10){
       this.pelotismo: pelotismo;
+    }
+    if (ama === reina || ama === asesora || ama === escudera || ama === luchadora){
+      this.ama: ama;
     }
     
   }
